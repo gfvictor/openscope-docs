@@ -3,6 +3,7 @@ import { OpenScopeLogo } from '@/components/ui/openscope-logo'
 
 export function baseOptions(): BaseLayoutProps {
   return {
+    i18n: true,
     nav: {
       title: (
         <OpenScopeLogo className="h-10 w-auto text-foreground transition-transform hover:scale-105" />
