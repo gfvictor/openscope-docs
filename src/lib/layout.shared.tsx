@@ -3,10 +3,11 @@ import { OpenScopeLogo } from '@/components/ui/openscope-logo'
 
 export function baseOptions(): BaseLayoutProps {
   return {
-    i18n: true,
+    i18n: false,
+    themeSwitch: { enabled: false },
     nav: {
       title: (
-        <OpenScopeLogo className="h-10 w-auto text-foreground transition-transform hover:scale-105" />
+        <OpenScopeLogo className="text-foreground mt-2 mb-2 h-10 w-auto shrink-0 transition-transform hover:scale-105" />
       ),
     },
     links: [
@@ -21,9 +22,9 @@ export function baseOptions(): BaseLayoutProps {
         items: [
           { text: 'Rakudash', url: 'https://demo.rakudash.com' },
           { text: 'EnTori', url: 'https://demo.entori.rakudash.com' },
-          { text: 'WanSpot', url: 'https://demo.wanspot.rakudash.com' }
-        ]
-      }
-    ]
-  } 
+          { text: 'WanSpot', url: 'https://demo.wanspot.rakudash.com' },
+        ],
+      },
+    ],
+  }
 }
