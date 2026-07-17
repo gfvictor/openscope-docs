@@ -17,7 +17,7 @@ export default async function Layout({
       tree={source.getPageTree(lang)}
       {...baseOptions()}
       sidebar={{
-        className: 'items-start',
+        className: 'items-start w-[260px]',
         footer: <SidebarFooter />,
       }}
     >
