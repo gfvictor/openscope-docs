@@ -1,0 +1,35 @@
+---
+title: Validação em Tempo Real
+description: Como previnimos lixo no banco de dados.
+---
+
+# Segurança e Validação de Dados
+
+A confiança nos daos é o pilar de um sistema de RH. O **EnTori** não confia no que o usuário digita até que os dados
+sejam validados.
+
+### O que é?
+
+É um sistema de bloqueio e alerta automático (alimentado pela ferramenta **Zod** e **React Hook Form**) que fiscaliza
+cada caractere que o candidato digita.
+
+### Para que serve?
+
+Serve para empedir que o candidato envie o formulário faltando informações crucuais (como telefone de contato, por
+exemplo) ou com formatos inválidos (como o e-mail somente com números, ou uma data de nascimento no futuro).
+
+### Como é usado?
+
+Enquanto o usuário preenche o formulário, as validações ocorrem instantaneamente em segundo plano:
+
+1. Se o candidato esquecer de preencher o "Nome", ele não consegue enviar o documento.
+2. Ao clicar no botão "Enviar Candidatura" com campos errados ou incompletos, uma mensagem de erro clara (traduzida para
+   o idioma que o candidato selecionou) aparece embaixo do campo explicando o que falta.
+3. O envio fica bloqueado até que todos os erros sejam corrigidos.
+
+### Resultado Esperado
+
+Garantia de **100% de integridade dos dados**. A agência nunca receberá um cadastro de candidato com número de telefone
+faltando ou com o tipo de visto não especificado, eliminando o retrabalho.
+
+---
