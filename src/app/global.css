@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --fd-layout-width: 100vw !important;
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -99,17 +99,17 @@ export function OpenScopeLogo({ className }: { className?: string }) {
         d="M2245.21 1689.09C2321.99 1689.09 2384.23 1751.33 2384.23 1828.11V1967.12C2384.23 2043.9 2321.99 2106.14 2245.21 2106.14V1689.09Z"
         fill="currentColor"
       />
-        <text
-          x="3100"
-          y="2384"
-          fill="currentColor"
-          fontFamily="var(--font-geist-sans), var(--font-sans), sans-serif"
-          fontWeight="500"
-          fontSize="750px"
-          opacity="0.6"
-        >
-          Docs
-        </text>
+      <text
+        x="3100"
+        y="2384"
+        fill="currentColor"
+        fontFamily="var(--font-geist-sans), var(--font-sans), sans-serif"
+        fontWeight="500"
+        fontSize="750px"
+        opacity="0.6"
+      >
+        Docs
+      </text>
     </svg>
   )
 }
