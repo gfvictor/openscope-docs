@@ -1,0 +1,30 @@
+---
+title: Real-Time Validation
+description: How we prevent garbage in the database.
+---
+
+# Security and Data Validation
+
+Trust in data is the pillar of an HR system. **EnTori** does not trust what the user types until the data is validated.
+
+### What is it?
+
+It is an automatic blocking and alert system (powered by **Zod** and **React Hook Form**) that inspects every character the candidate types.
+
+### What is it for?
+
+It serves to prevent the candidate from submitting the form missing crucial information (like a contact phone number, for example) or with invalid formats (like an email with only numbers, or a future birth date).
+
+### How is it used?
+
+While the user fills out the form, validations occur instantly in the background:
+
+1. If the candidate forgets to fill in their "Name", they cannot submit the document.
+2. When clicking the "Submit Application" button with wrong or incomplete fields, a clear error message (translated into the language the candidate selected) appears below the field explaining what is missing.
+3. The submission is blocked until all errors are corrected.
+
+### Expected Result
+
+Guarantee of **100% data integrity**. The agency will never receive a candidate registration with a missing phone number or an unspecified visa type, eliminating rework.
+
+---
