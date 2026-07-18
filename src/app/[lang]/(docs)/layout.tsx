@@ -15,7 +15,7 @@ export default async function Layout({
   return (
     <DocsLayout
       tree={source.getPageTree(lang)}
-      {...baseOptions()}
+      {...baseOptions(lang)}
       sidebar={{
         className: 'items-start w-[260px]',
         footer: <SidebarFooter />,

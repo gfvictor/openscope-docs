@@ -1,0 +1,84 @@
+---
+title: 給与前払い
+description: オンラインでの給与前払いの申請と管理。
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# 給与前払い（前借り）
+
+財務部門の業務を煩雑にすることなく、必要なときに従業員の流動性を確保します。
+
+### これは何ですか？
+
+公式の給料日前に、従業員が自分自身の給与から引き出しや前払い（いわゆる「前借り」）を申請するための統合セルフサービスシステムです。
+
+### 何のためにあるのですか？
+
+日本の人材派遣会社において最も繰り返され、混沌とするプロセスの1つを自動化するためです。WhatsAppに散在する申請は、財務管理と監査を困難にし、将来の控除でエラーを生み出します。
+
+### どのように使われますか？
+
+従業員は`/salary-advance`ルートにアクセスし、前借りしたい金額（派遣会社が定めた限度額を遵守）を入力して申請を送信します。申請は構造化された形で**Rakudash**の管理ダッシュボードに届き、人事部が評価、承認、または拒否します。
+
+**ステップバイステップ：**
+
+1. 従業員は**給与前払い**メニューにアクセスします。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![給与前払いメニュー](/img/wanspot/salary/step-1-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+2. **前払い申請**ボタンをクリックします。
+3. 事前に設定された限度額の範囲内で、希望する**金額**を円（¥）で入力します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![金額の入力](/img/wanspot/salary/step-3-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+4. **備考**欄に申請の理由を記入します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![備考欄](/img/wanspot/salary/step-4-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+5. **送信**をクリックして送信を確定します。
+6. 申請は「保留中」ステータスでキューに入ります。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![保留中ステータス](/img/wanspot/salary/step-6-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+7. 人事部が確認するとすぐにステータスが「承認済み」または「拒否」に変わり、従業員に通知されます。
+
+### 期待される結果
+
+前借りの申請が集中化され、整理され、追跡可能になり、処理がはるかに迅速になります。派遣会社は送金されたすべての円の監査可能な履歴を保持し、控除は給与計算で自動的にスケジュールされます。

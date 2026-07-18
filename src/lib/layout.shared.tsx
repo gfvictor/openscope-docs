@@ -1,11 +1,14 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import { OpenScopeLogo } from '@/components/ui/openscope-logo'
 
-export function baseOptions(): BaseLayoutProps {
+export function baseOptions(lang?: string): BaseLayoutProps {
+  const navUrl = lang && lang !== 'ja' ? `/${lang}` : '/'
+
   return {
     i18n: false,
     themeSwitch: { enabled: false },
     nav: {
+      url: navUrl,
       title: (
         <OpenScopeLogo className="text-foreground mt-2 mb-2 h-10 w-auto shrink-0 transition-transform hover:scale-105" />
       ),
