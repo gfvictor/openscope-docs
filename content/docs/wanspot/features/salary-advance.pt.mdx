@@ -1,0 +1,84 @@
+---
+title: Adiantamento Salarial
+description: Solicitação e gestão de vales online.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# Adiantamento Salarial (Vale)
+
+Garantir liquidez para o colaborador em momentos de necessidade, sem burocratizar o departamento financeiro.
+
+### O que é?
+
+Um sistema integrado de autoatendimento para o funcionário solicitar saques ou adiantamentos (o famoso "vale") do seu próprio salário antes da data de pagamento oficial.
+
+### Para que serve?
+
+Automatizar um dos processos mais recorrentes e caóticos das agências de empregos no Japão. Pedidos espalhados no WhatsApp dificultam a gestão e a auditoria financeira, gerando erros nos descontos futuros.
+
+### Como é utilizado?
+
+O funcionário acessa a rota `/salary-advance`, informa o valor que deseja adiantar (respeitando o limite estipulado pela agência) e envia a solicitação. O pedido cai de forma estruturada no painel administrativo do **Rakudash** para que o RH avalie, aprove ou negue.
+
+**Passo a passo:**
+
+1. O colaborador acessa o menu de **Adiantamentos**.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Menu de Adiantamentos](/img/wanspot/salary/step-1-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+2. Clica no botão **Solicitar Adiantamento**.
+3. Insere o **Valor** desejado em Ienes (¥), respeitando os limites pré-estabelecidos.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Inserir Valor](/img/wanspot/salary/step-3-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+4. Descreve o motivo da solicitação no campo **Observações**.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Campo de Observações](/img/wanspot/salary/step-4-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+5. Confirma o envio clicando em **Enviar**.
+6. O pedido entra na fila com o status "Pendente".
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Status Pendente](/img/wanspot/salary/step-6-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+7. Assim que o RH analisar, o status mudará para "Aprovado" ou "Negado" e o colaborador será notificado.
+
+### Resultado Esperado
+
+As solicitações de vale tornam-se centralizadas, organizadas, rastreáveis e muito mais rápidas de serem processadas. A agência mantém um histórico auditável de cada iene repassado, e o desconto é programado na folha automaticamente.

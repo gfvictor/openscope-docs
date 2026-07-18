@@ -1,0 +1,119 @@
+---
+title: Gestão de Folgas
+description: Solicitação de folgas remuneradas (Yukyu) e aviso de ausências.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# Gestão de Folgas e Ausências
+
+Documentar o tempo e formalizar a comunicação entre o colaborador, a agência e a fábrica cliente.
+
+### O que é?
+
+Uma interface de agendamento e notificação dedicada a registrar os dias em que o funcionário não estará presente no trabalho.
+
+### Para que serve?
+
+Eliminar a comunicação fragmentada e informal. Quando um funcionário precisa faltar (Yasumi) ou deseja usar seus dias de férias remuneradas (Yukyu), um simples aviso de boca ou mensagem solta pode se perder, causando problemas com a fábrica.
+
+### Como é utilizado?
+
+Através da aba `/leaves`, o funcionário preenche as datas em que precisa se ausentar e categoriza o motivo da falta. O pedido entra formalizado no sistema, que alerta os gestores da agência em tempo hábil para que possam repassar a informação à fábrica cliente ou processar o pagamento do Yukyu.
+
+**Passo a passo:**
+
+1. O colaborador acessa o menu de **Folgas e Frequências**, pela aba **Folgas**.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Aba Folgas](/img/wanspot/leaves/step-1-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+2. Clica no botão **Nova Solicitação**.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Nova Solicitação](/img/wanspot/leaves/step-2-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+3. Escolhe o **Tipo** (Falta, Atraso, Saída Antecipada ou Férias Remuneradas).
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Tipo de Solicitação](/img/wanspot/leaves/step-3-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+4. Seleciona a data no calendário interativo.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Calendário](/img/wanspot/leaves/step-4-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+5. Seleciona o **Período** (Manhã, Tarde ou Dia Inteiro).
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Período](/img/wanspot/leaves/step-5-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+6. (Opcional) Adiciona uma justificativa, caso aplicável.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Justificativa](/img/wanspot/leaves/step-6-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+7. Ao enviar, o pedido fica com status "Pendente" e o colaborador acompanha o andamento em tempo real até a resposta da agência.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Status Pendente](/img/wanspot/leaves/step-7-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+### Resultado Esperado
+
+O pedido fica formalmente documentado no sistema, protegendo o funcionário de faltas injustificadas e dando à agência o tempo e o registro necessários para administrar o efetivo na fábrica com perfeição.

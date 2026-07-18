@@ -1,0 +1,119 @@
+---
+title: 休暇管理
+description: 有給休暇の使用申請と欠勤の通知。
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# 休暇と欠勤の管理
+
+時間を記録し、従業員、派遣会社、および顧客工場間のコミュニケーションを正式なものにします。
+
+### これは何ですか？
+
+従業員が仕事に出席しない日を記録することに特化したスケジューリングおよび通知インターフェースです。
+
+### 何のためにあるのですか？
+
+断片的で非公式なコミュニケーションを排除するためです。従業員が休む必要がある場合（休み）や有給休暇を使用したい場合（有給）、単なる口頭の通知や単発のメッセージは失われやすく、工場との問題を引き起こします。
+
+### どのように使われますか？
+
+`/leaves`タブを通じて、従業員は休む必要がある日付を入力し、欠勤の理由を分類します。申請はシステム内で正式に記録され、派遣会社の管理者にタイムリーに警告を発するため、顧客工場に情報を伝えたり、有給休暇の支払いを処理したりできます。
+
+**ステップバイステップ：**
+
+1. 従業員は**休暇と勤怠**メニューにアクセスし、**休暇**タブを開きます。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![休暇タブ](/img/wanspot/leaves/step-1-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+2. **新規申請**ボタンをクリックします。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![新規申請](/img/wanspot/leaves/step-2-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+3. **種類**（欠勤、遅刻、早退、または有給休暇）を選択します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![申請の種類](/img/wanspot/leaves/step-3-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+4. インタラクティブなカレンダーで日付を選択します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![カレンダー](/img/wanspot/leaves/step-4-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+5. **期間**（午前、午後、または終日）を選択します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![期間](/img/wanspot/leaves/step-5-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+6. （オプション）必要に応じて理由を記入します。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![理由](/img/wanspot/leaves/step-6-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+7. 送信後、申請は「保留中」ステータスになり、従業員は派遣会社の回答があるまでリアルタイムで進捗状況を追跡できます。
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">画像を展開する</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![保留中ステータス](/img/wanspot/leaves/step-7-leaves-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+### 期待される結果
+
+申請はシステムに正式に文書化され、不当な欠勤から従業員を保護し、派遣会社に工場の人員配置を完璧に管理するために必要な時間と記録を与えます。

@@ -1,0 +1,84 @@
+---
+title: Salary Advance
+description: Online request and management of salary advances.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# Salary Advance
+
+Ensuring liquidity for the employee in times of need, without adding bureaucracy to the finance department.
+
+### What is it?
+
+An integrated self-service system for the employee to request withdrawals or advances from their own salary before the official payday.
+
+### What is it for?
+
+To automate one of the most recurring and chaotic processes of employment agencies in Japan. Requests scattered across WhatsApp make financial management and auditing difficult, generating errors in future deductions.
+
+### How is it used?
+
+The employee accesses the `/salary-advance` route, enters the amount they wish to advance (respecting the limit stipulated by the agency) and sends the request. The request goes in a structured way to the **Rakudash** administrative dashboard so that HR can evaluate, approve, or deny it.
+
+**Step-by-step:**
+
+1. The employee accesses the **Salary Advance** menu.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expand image</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Salary Advance Menu](/img/wanspot/salary/step-1-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+2. Clicks the **Request Advance** button.
+3. Enters the desired **Amount** in Yen (¥), respecting the pre-established limits.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expand image</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Enter Amount](/img/wanspot/salary/step-3-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+4. Describes the reason for the request in the **Remarks** field.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expand image</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Remarks Field](/img/wanspot/salary/step-4-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+5. Confirms the submission by clicking **Send**.
+6. The request enters the queue with a "Pending" status.
+
+   <Accordions>
+     <Accordion title={<span className="text-sm font-normal text-gray-400">Expand image</span>}>
+       <div
+         style={{ maxWidth: '320px' }}
+         className="my-3 overflow-hidden rounded-md border shadow-sm"
+       >
+         ![Pending Status](/img/wanspot/salary/step-6-salary-ws.jpg)
+       </div>
+     </Accordion>
+   </Accordions>
+
+7. As soon as HR analyzes it, the status will change to "Approved" or "Denied" and the employee will be notified.
+
+### Expected Result
+
+Advance requests become centralized, organized, traceable, and much faster to process. The agency maintains an auditable history of every yen transferred, and the deduction is automatically scheduled in the payroll.
