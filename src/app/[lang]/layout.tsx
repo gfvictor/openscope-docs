@@ -20,6 +20,13 @@ export const metadata = {
   description: 'Rakudash - Official Product Documentation',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
 export default async function Layout({
   children,
   params,
