@@ -1,0 +1,143 @@
+---
+title: Painel Inicial
+description: Visão geral e métricas de desempenho do Rakudash.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# Painel Inicial (Dashboard)
+
+O painel inicial é a primeira tela exibida após o login bem-sucedido no Rakudash. Ele atua como o centro de comando visual da agência.
+
+### O que é?
+
+Um Dashboard analítico composto por cards numéricos e gráficos dinâmicos que consolidam os dados de todos os outros módulos do sistema.
+
+### Para que serve?
+
+Oferecer aos gestores uma visão panorâmica e imediata da saúde da empresa, alertando sobre pendências financeiras, vencimento de contratos e movimentação de funcionários sem a necessidade de gerar relatórios complexos.
+
+### Como é usado?
+
+A tela é dividida em métricas operacionais estruturadas na seguinte ordem:
+
+- **Comparação de Gêneros:** Exibe a quantidade atual de colaboradores homens e mulheres, além do número total de contratados ativos.
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Comparação de Gêneros](/img/rakudash/dashboard/step-1-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Alerta de Contratos:** Monitora e notifica sobre o número de contratos de trabalho que estão prestes a vencer em breve e os que já se encontram expirados.
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Alerta de Contratos](/img/rakudash/dashboard/step-2-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Alerta de Férias Remuneradas (Yukyu):** Mostra os Yukyus que já foram concedidos e alerta sobre os próximos que a agência precisa avaliar e aprovar.
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Alerta de Yukyus](/img/rakudash/dashboard/step-3-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Imóveis da Agência:** Informa quantos alojamentos estão ocupados (exibindo o balanço de receita gerada por eles: _valor cobrado como aluguel - valor pago à imobiliária_) e quantos estão vagos (detalhando os descontos e gastos de manutenção perdidos).
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Imóveis da Agência](/img/rakudash/dashboard/step-4-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Alerta de Frequência:** Indica quantos dias de Yukyu estão programados para serem usados pelos colaboradores nos próximos dias (o intervalo de dias é customizável pela agência).
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Alerta de Frequência](/img/rakudash/dashboard/step-5-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Alerta de Adiantamentos Salariais:** Mostra a quantidade de pedidos de vales solicitados e o montante total (em valor financeiro) que a agência precisará descontar ou receber futuramente.
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Adiantamentos Salariais](/img/rakudash/dashboard/step-6-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Gráfico de Candidaturas:** Um gráfico de linha que traça o volume de novos candidatos que aplicaram via EnTori no período de um ano (contando retroativamente a partir do mês atual).
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Gráfico de Candidaturas](/img/rakudash/dashboard/step-7-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Gráfico de Alocações:** Um gráfico de pizza detalhando a distribuição de contratos de trabalho válidos, divididos por escritórios responsáveis (Matriz e Filiais).
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Gráfico de Alocações](/img/rakudash/dashboard/step-8-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **Gráfico de Rotatividade (Turnover):** Gráfico de linha demonstrando a relação de quantos colaboradores entraram (foram contratados) versus quantos saíram (desligados) no período de um ano (contando retroativamente a partir do mês atual).
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">Expandir imagem</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![Gráfico de Rotatividade](/img/rakudash/dashboard/step-9-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+### Resultado esperado
+
+Gestores empoderados com informações estratégicas em tempo real, permitindo ações preventivas em vez de reativas (como renovar contratos antes que expirem ou preparar fluxo de caixa para os adiantamentos solicitados).
