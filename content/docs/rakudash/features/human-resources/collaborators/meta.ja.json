@@ -1,0 +1,11 @@
+{
+  "title": "社員",
+  "pages": [
+    "personal-info",
+    "allocation-status",
+    "leaves-vacations",
+    "pdf-documents",
+    "deductions",
+    "dependents"
+  ]
+}

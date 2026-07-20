@@ -3,6 +3,8 @@ title: Acesso e Segurança
 description: Como entrar, manter sua conta segura e gerenciar seu perfil no Rakudash.
 ---
 
+import { Callout } from 'fumadocs-ui/components/callout'
+
 # Acesso e Segurança
 
 O Rakudash é um ambiente de acesso restrito e seguro, construído especificamente para proteger os dados confidenciais geridos pela agência.
@@ -18,12 +20,11 @@ Garantir a integridade do sistema, prevenir acessos não autorizados e fornecer 
 ### Como é usado?
 
 - **Entrando no Sistema (Login):** O acesso é feito utilizando o seu e-mail corporativo cadastrado e a sua senha pessoal. O e-mail inicial é sempre fornecido pelo administrador geral.
-  > <span className="font-semibold">Aviso sobre Sessão Expirada:</span>
-  > <span className="font-normal">
-  >   Por questões de segurança da informação, o Rakudash encerra automaticamente a sua sessão após
-  >   um longo período de inatividade. Caso a tela de login seja exibida enquanto você estiver
-  >   trabalhando, basta inserir suas credenciais novamente para continuar.
-  > </span>
+  <Callout title="Aviso sobre Sessão Expirada:">
+    Por questões de segurança da informação, o Rakudash encerra automaticamente a sua sessão após um
+    longo período de inatividade. Caso a tela de login seja exibida enquanto você estiver
+    trabalhando, basta inserir suas credenciais novamente para continuar.
+  </Callout>
 - **Recuperação de Senha:** Caso você esqueça a sua senha, utilize a opção de recuperação disponível na tela de login. O sistema enviará um link seguro e temporário diretamente para o seu e-mail corporativo para a redefinição.
 - **Meu Perfil:** Para gerenciar suas informações básicas sem depender de suporte técnico, clique no seu usuário dentro do painel para abrir o modal de Perfil. Através dele, é possível atualizar o seu **Nome de exibição** e modificar a sua **Senha**.
 
