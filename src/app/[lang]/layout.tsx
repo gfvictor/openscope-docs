@@ -16,7 +16,10 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://docs.rakudash.com',
   ),
-  title: 'OpenScope Docs',
+  title: {
+    template: 'Docs | %s',
+    default: 'Docs | Rakudash',
+  },
   description: 'Rakudash - Official Product Documentation',
 }
 
