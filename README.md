@@ -1,4 +1,4 @@
-# Rakudash Documentation Wiki
+# OpenScope Documentation Wiki
 
 ## About
 
