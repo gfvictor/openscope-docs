@@ -1,0 +1,73 @@
+---
+title: Client Companies
+description: Registration and configuration of factories, business rules, and billing.
+---
+
+# Client Companies
+
+### What is it?
+
+A complete operational hub containing the registry of all factories, warehouses, and companies that contract the agency for labor supply and allocation.
+
+### What is it for?
+
+To manage everything from the client's address and contact info to the complex business rules and salary calculations for each of their sectors, precisely organizing the timesheet closing process and monthly billing.
+
+### How is it used?
+
+The interface presents a master list of clients containing: Company name, Responsible agency office, Prefecture, Phone number, and the Closing date.
+
+Clicking on a client from the list directs the manager to a robust panel with five navigation tabs:
+
+1. **Client Information:**
+   - **Registration Data:**
+     - Company name and responsible office;
+     - Complete address (with Google Maps URL);
+     - Phone and fax;
+     - Closing day and payment day;
+     - Space for free notes.
+   - **Attendance Notice:**
+     - Quick monitoring of submissions;
+     - Weekly attendance notices of allocated employees.
+
+2. **Sectors:**
+   - **List of Sectors:**
+     - Roster of all active work areas within the company.
+   - **Financial and Contractual Details (selected sector):**
+     - Description of the required work;
+     - Base salary paid (male/female);
+     - Overtime percentage, night shift premium, and holiday work;
+     - Notes on the calendar used (national, proprietary, or client's);
+     - Termination rules (advance notice, contractual fines, etc.).
+   - **Work Schedule:**
+     - Entry times;
+     - Break and lunch durations;
+     - Weekly days off defined for that sector.
+   - **Supervisors:**
+     - Internal contacts from the client company (managers, line leaders);
+     - Contacts directly responsible for that sector.
+
+3. **Allocated Employees:**
+   - **Active allocation panel:**
+     - Card with the list of sectors;
+     - Card with the nominal roster of employees in the selected sector.
+
+4. **Attendance Upload:**
+   - **Timesheet processing:**
+     - Upload of attendance lists sent by the company;
+     - OCR (Optical Character Recognition) for direct hour calculation.
+
+   <Callout title="Implementation Phase:">
+     OCR integration is currently under development. Temporarily, processing operates
+     semi-automatically, requiring the manager to manually input attendance data to consolidate the
+     hour calculation.
+   </Callout>
+
+5. **Billing (Invoice):**
+   - **Invoice module:**
+     - Invoice generation for the company;
+     - Calculation based on the closed hours of each allocated employee.
+
+### Expected Result
+
+Precise and bulletproof B2B control. The agency unifies salary negotiations, communications with supervisors, and billing for each client, ensuring that payroll calculations and invoicing strictly respect the contractual agreements of each sector.

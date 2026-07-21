@@ -1,0 +1,41 @@
+---
+title: Exportação
+description: Extração de relatórios estruturados de recursos humanos.
+---
+
+# Exportação
+
+### O que é?
+
+Uma ferramenta robusta para extração de dados tabulares (_data dump_) referente aos registros de colaboradores e alocações vigentes.
+
+### Para que serve?
+
+Viabilizar o repasse estratégico de informações para sistemas externos, contabilidades terceirizadas ou auditorias gerenciais internas, garantindo flexibilidade absoluta na manipulação dos dados brutos da agência.
+
+### Como é usado?
+
+A interface apresenta opções segmentadas de extração alocadas em dois cards operacionais:
+
+1. **Exportação de Alocações (Por Empresa):**
+   - Extração da lista de funcionários parametrizada pelas empresas onde atuam.
+   - Ao acionar a ação `Exportar Lista`, um modal de configuração é apresentado com as seguintes opções:
+     - Filtro por escritório específico da agência;
+     - Seleção de uma empresa cliente alvo ou extração global (que gera planilhas individuais para cada cliente no lote);
+     - Delimitação do período de vigência para a exportação;
+     - Filtro de status contratual (exclusividade de funcionários ativos ou inclusão de histórico completo contemplando desligamentos).
+
+2. **Exportação Global (Quadro Completo):**
+   - Extração massiva de toda a base de dados de funcionários registrados na agência, independente de alocação.
+   - O acionamento da ação `Exportar Lista` requer apenas que o gestor defina o período de consolidação no modal.
+   - O resultado é um arquivo unificado contendo o censo demográfico e contratual completo da corporação.
+
+<Callout title="Padrão de Arquivo:">
+  Visando compatibilidade e integração direta com os softwares contábeis do mercado, todas as
+  rotinas de exportação empacotam e fornecem os relatórios exclusivamente no formato Microsoft Excel
+  (.xlsx).
+</Callout>
+
+### Resultado esperado
+
+Mobilidade irrestrita de dados. A agência mantém soberania sobre suas informações corporativas, permitindo a extração rápida e sem atritos de relatórios complexos, essenciais para tomada de decisão em tempo hábil e prestação de contas.

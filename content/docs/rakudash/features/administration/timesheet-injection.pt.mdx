@@ -1,0 +1,47 @@
+---
+title: Injeção de Frequência
+description: Inserção manual de horas para processamento contábil.
+---
+
+# Injeção de Frequência
+
+### O que é?
+
+Um módulo de consolidação operacional onde o gestor realiza a inserção (ou conferência) das horas trabalhadas pelos funcionários, viabilizando o cálculo automatizado da folha de pagamento.
+
+### Para que serve?
+
+Garantir que os dados registrados nos cartões de ponto físicos ou planilhas dos clientes sejam transcritos para o banco de dados do sistema, aplicando as variáveis contratuais corretas (horas extras, adicional noturno, feriados) para o cálculo salarial preciso e geração do faturamento.
+
+### Como é usado?
+
+Após selecionar a empresa cliente alvo, a interface exibe o painel de injeção dividido em duas frentes:
+
+1. **Painel de Colaboradores:**
+   - Lista nominal de todos os funcionários com alocação ativa na empresa selecionada;
+   - Seleção individual do funcionário para carregamento de sua matriz de horas.
+
+2. **Matriz de Frequência (Ciclo Vigente):**
+   - Tabela dinâmica contendo todos os dias do período de pagamento atual. Para cada dia, os seguintes campos métricos estão disponíveis:
+     - Data predefinida do ciclo;
+     - Horas regulares trabalhadas (Teiji);
+     - Volume de horas extras diárias;
+     - Horas com adicional noturno regular;
+     - Horas extras noturnas (Shinya Zangyō);
+     - Horas trabalhadas em feriados ou folgas remuneradas.
+
+<Callout title="Automação via OCR (Em desenvolvimento):">
+  Atualmente, o processo exige preenchimento manual. Após a integração definitiva do módulo OCR,
+  estes campos serão preenchidos automaticamente com base na leitura ótica dos cartões de ponto. O
+  papel do gestor passará a ser exclusivamente de conferência e auditoria de anomalias.
+</Callout>
+
+<Callout title="Processamento de Dados:">
+  Os cálculos salariais não são executados em tempo real durante a digitação. É mandatório que o
+  gestor acione a ação de "Salvar" ao finalizar o preenchimento da matriz para que os dados sejam
+  validados e injetados no motor de cálculo da folha.
+</Callout>
+
+### Resultado esperado
+
+Precisão contábil. A agência mitiga erros de digitação de folha de pagamento, consolida as variáveis complexas da legislação trabalhista e centraliza os dados de frequência em uma base auditável e pronta para o faturamento.

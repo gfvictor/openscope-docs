@@ -1,0 +1,73 @@
+---
+title: Empresas Clientes
+description: Cadastro e configuração de fábricas, regras de negócio e faturamento.
+---
+
+# Empresas Clientes
+
+### O que é?
+
+Um hub operacional completo com o cadastro de todas as fábricas, galpões e empresas que contratam a agência para o fornecimento e alocação de mão de obra.
+
+### Para que serve?
+
+Gerenciar desde o endereço e contato do cliente até as complexas regras de negócio e cálculo salarial de cada um de seus setores, organizando com precisão o processo de fechamento (frequência) e o faturamento mensal (cobrança).
+
+### Como é usado?
+
+A interface apresenta uma lista mestre de clientes contendo: Nome da empresa, Escritório da agência responsável por ela, Província, Telefone e a Data de fechamento.
+
+Ao clicar em um cliente da lista, o gestor é direcionado a um painel robusto com cinco abas de navegação:
+
+1. **Informações do Cliente:**
+   - **Dados Cadastrais:**
+     - Nome da empresa e escritório responsável;
+     - Endereço completo (com link do Google Maps);
+     - Telefone e fax;
+     - Dia de fechamento e dia de pagamento;
+     - Espaço para anotações livres.
+   - **Aviso de Frequência:**
+     - Monitoramento rápido de envios;
+     - Avisos de frequência semanal dos funcionários alocados.
+
+2. **Setores:**
+   - **Lista de Setores:**
+     - Relação de todas as áreas de trabalho ativas dentro da empresa.
+   - **Detalhes Financeiros e Contratuais (do setor selecionado):**
+     - Descrição do trabalho exigido;
+     - Salário base pago (homem/mulher);
+     - Percentual de hora extra, adicional noturno e trabalho em feriados;
+     - Notas sobre o calendário utilizado (nacional, próprio ou do cliente);
+     - Regras de desligamento (aviso prévio, multas contratuais, etc).
+   - **Escala de Trabalho:**
+     - Horários de entrada;
+     - Tempo de intervalos e de almoço;
+     - Dias de folga semanal definidos para aquele setor.
+   - **Encarregados:**
+     - Lista de contatos internos da empresa cliente (gerentes, líderes de linha);
+     - Contatos que respondem diretamente por aquele setor.
+
+3. **Funcionários Alocados:**
+   - **Painel de alocação ativa:**
+     - Card com a lista de setores;
+     - Card com a relação nominal de funcionários no setor selecionado.
+
+4. **Upload de Frequência:**
+   - **Processamento de ponto:**
+     - Upload das listas de frequência enviadas pela empresa;
+     - Leitura automática (OCR) para cálculo direto de horas.
+
+   <Callout title="Fase de Implementação:">
+     A integração do OCR encontra-se em estágio de desenvolvimento. Temporariamente, o processamento
+     opera de forma semiautomática, exigindo que o gestor realize a inserção manual dos dados de
+     frequência para a consolidação do cálculo de horas.
+   </Callout>
+
+5. **Faturamento (Nota):**
+   - **Módulo de cobrança:**
+     - Geração de notas para a empresa;
+     - Cálculo baseado nas horas fechadas de cada funcionário.
+
+### Resultado esperado
+
+Controle B2B preciso e blindado. A agência unifica as negociações salariais, as comunicações com encarregados e os faturamentos de cada cliente, garantindo que o cálculo de folha e cobrança respeitem rigorosamente os acordos contratuais de cada setor.

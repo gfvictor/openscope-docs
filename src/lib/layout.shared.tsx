@@ -3,6 +3,9 @@ import { OpenScopeLogo } from '@/components/ui/openscope-logo'
 
 export function baseOptions(lang?: string): BaseLayoutProps {
   const navUrl = lang && lang !== 'ja' ? `/${lang}` : '/'
+  const isPt = !lang || lang === 'pt'
+  const officialSiteText = isPt ? 'Site Oficial' : lang === 'ja' ? '公式サイト' : 'Official Site'
+  const demosText = isPt ? 'Demonstrações' : lang === 'ja' ? 'デモ' : 'Demos'
 
   return {
     i18n: false,
@@ -15,13 +18,13 @@ export function baseOptions(lang?: string): BaseLayoutProps {
     },
     links: [
       {
-        text: 'Official Site',
+        text: officialSiteText,
         url: 'https://openscope-systems.com',
         active: 'nested-url',
       },
       {
         type: 'menu',
-        text: 'Demos',
+        text: demosText,
         items: [
           { text: 'Rakudash', url: 'https://demo.rakudash.com' },
           { text: 'EnTori', url: 'https://demo.entori.rakudash.com' },

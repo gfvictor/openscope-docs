@@ -1,0 +1,11 @@
+{
+  "title": "Human Resources",
+  "pages": [
+    "index",
+    "candidates",
+    "collaborators",
+    "waiting-hire",
+    "waiting-transfer",
+    "waiting-termination"
+  ]
+}
