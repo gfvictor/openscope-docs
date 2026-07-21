@@ -18,7 +18,7 @@ export default async function Layout({
       {...baseOptions(lang)}
       sidebar={{
         className: 'items-start w-[260px]',
-        footer: <SidebarFooter />,
+        footer: <SidebarFooter key="custom-sidebar-footer" />,
       }}
     >
       {children}

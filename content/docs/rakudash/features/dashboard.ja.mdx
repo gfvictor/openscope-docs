@@ -1,0 +1,143 @@
+---
+title: ダッシュボード
+description: Rakudashの概要とパフォーマンス指標。
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion'
+
+# ダッシュボード
+
+ダッシュボードは、Rakudashへのログイン成功後に表示される最初の画面です。派遣会社の視覚的な司令塔として機能します。
+
+### どのような機能ですか？
+
+他のすべてのシステムモジュールからのデータを統合した、数値カードと動的なグラフで構成される分析ダッシュボードです。
+
+### 何のためのものですか？
+
+複雑なレポートを作成することなく、管理者に会社の健全性の全体的かつ即時的なビューを提供し、未処理の財務事項、契約の期限切れ、および従業員の離職について警告するためです。
+
+### どのように使用しますか？
+
+画面は、以下の順序で構成された運用指標に分かれています：
+
+- **男女比の比較:** 現在の男性および女性従業員の数と、稼働中の契約者の総数を表示します。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![男女比の比較](/img/rakudash/dashboard/step-1-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **雇用契約アラート:** まもなく期限切れになる雇用契約の数と、すでに期限切れになった契約の数を監視し、通知します。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![雇用契約アラート](/img/rakudash/dashboard/step-2-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **有給休暇（有休）アラート:** すでに付与された有休を表示し、派遣会社が評価して承認する必要がある今後の有休について警告します。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![有給休暇（有休）アラート](/img/rakudash/dashboard/step-3-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **社宅（寮）:** 入居中の物件数（そこから生み出される収益バランスを表示：_請求される家賃 - 不動産会社への支払額_）と空室の物件数（失われた控除額と維持費の詳細を表示）を知らせます。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![社宅（寮）](/img/rakudash/dashboard/step-4-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **勤怠アラート:** 今後数日間に従業員が使用する予定の有休日数を示します（日数間隔は派遣会社がカスタマイズ可能）。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![勤怠アラート](/img/rakudash/dashboard/step-5-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **給与前払いアラート:** 申請された前借り（前払い）の数と、派遣会社が将来控除または受け取る必要がある合計金額を表示します。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![給与前払いアラート](/img/rakudash/dashboard/step-6-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **応募者数グラフ:** 現在の月から遡って1年間の、EnTori経由で応募した新規求職者の推移を示す折れ線グラフです。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![応募者数グラフ](/img/rakudash/dashboard/step-7-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **配属状況グラフ:** 担当オフィス（本社および支店）ごとに分割された、有効な派遣契約の分布を示す円グラフです。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![配属状況グラフ](/img/rakudash/dashboard/step-8-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+- **離職率（ターンオーバー）グラフ:** 現在の月から遡って1年間の、入社した（採用された）従業員数と退社した（解雇された）従業員数の比率を示す折れ線グラフです。
+
+  <Accordions>
+    <Accordion title={<span className="text-sm font-normal text-gray-400">画像を拡大</span>}>
+      <div
+        style={{ maxWidth: '320px' }}
+        className="my-3 overflow-hidden rounded-md border shadow-sm"
+      >
+        ![離職率グラフ](/img/rakudash/dashboard/step-9-dashboard-rd.jpg)
+      </div>
+    </Accordion>
+  </Accordions>
+
+### 期待される結果
+
+管理者がリアルタイムの戦略的情報を把握できるようになり、後手ではなく予防的な行動（期限切れ前の契約更新や、申請された前払いのためのキャッシュフローの準備など）を可能にします。

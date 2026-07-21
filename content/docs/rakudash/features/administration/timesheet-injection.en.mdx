@@ -1,0 +1,47 @@
+---
+title: Timesheet Injection
+description: Manual insertion of hours for accounting processing.
+---
+
+# Timesheet Injection
+
+### What is it?
+
+An operational consolidation module where the manager inserts (or verifies) the hours worked by employees, enabling the automated calculation of the payroll.
+
+### What is it for?
+
+To ensure that data recorded on physical timesheets or client spreadsheets is transcribed into the system's database, applying the correct contractual variables (overtime, night shift premium, holidays) for precise salary calculation and billing generation.
+
+### How is it used?
+
+After selecting the target client company, the interface displays the injection panel divided into two fronts:
+
+1. **Employee Panel:**
+   - Nominal roster of all employees with active allocation in the selected company;
+   - Individual selection of the employee to load their hour matrix.
+
+2. **Attendance Matrix (Current Cycle):**
+   - Dynamic table containing all days of the current payment period. For each day, the following metric fields are available:
+     - Predefined date of the cycle;
+     - Regular hours worked (Teiji);
+     - Volume of daily overtime hours;
+     - Hours with regular night shift premium;
+     - Late-night overtime hours (Shinya Zangyō);
+     - Hours worked on holidays or paid days off.
+
+<Callout title="OCR Automation (In Development):">
+  Currently, the process requires manual data entry. Following the definitive integration of the OCR
+  module, these fields will be automatically populated based on the optical reading of timesheets.
+  The manager's role will shift exclusively to verification and anomaly auditing.
+</Callout>
+
+<Callout title="Data Processing:">
+  Salary calculations are not executed in real-time during data entry. It is mandatory for the
+  manager to trigger the "Save" action upon completing the matrix entry so that the data is
+  validated and injected into the payroll calculation engine.
+</Callout>
+
+### Expected Result
+
+Accounting precision. The agency mitigates payroll typing errors, consolidates complex variables of labor legislation, and centralizes attendance data in an auditable database ready for billing.

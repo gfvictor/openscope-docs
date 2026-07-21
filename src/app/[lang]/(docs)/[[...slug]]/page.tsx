@@ -19,15 +19,18 @@ export default async function Page(props: { params: Promise<{ lang: string; slug
   let demoUrl = ''
   let demoName = ''
 
+  const isPt = !params.lang || params.lang === 'pt'
+  const isJa = params.lang === 'ja'
+
   if (topLevel === 'entori') {
     demoUrl = 'https://demo.entori.rakudash.com'
-    demoName = 'Ver Demo do EnTori'
+    demoName = isPt ? 'Ver Demo do EnTori' : isJa ? 'EnToriのデモを見る' : 'View EnTori Demo'
   } else if (topLevel === 'wanspot') {
     demoUrl = 'https://demo.wanspot.rakudash.com'
-    demoName = 'Ver Demo do WanSpot'
+    demoName = isPt ? 'Ver Demo do WanSpot' : isJa ? 'WanSpotのデモを見る' : 'View WanSpot Demo'
   } else if (topLevel === 'rakudash') {
     demoUrl = 'https://demo.rakudash.com'
-    demoName = 'Ver Demo do Rakudash'
+    demoName = isPt ? 'Ver Demo do Rakudash' : isJa ? 'Rakudashのデモを見る' : 'View Rakudash Demo'
   }
 
   return (

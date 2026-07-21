@@ -1,0 +1,11 @@
+{
+  "title": "人事",
+  "pages": [
+    "index",
+    "candidates",
+    "collaborators",
+    "waiting-hire",
+    "waiting-transfer",
+    "waiting-termination"
+  ]
+}
