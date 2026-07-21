@@ -60,7 +60,7 @@ export default async function Layout({
       'On this page(table of contents)': '目次',
       'No results found(search dialog)': '結果がありません',
       'Choose a language(language switcher)': '言語を選択',
-    }
+    },
   }
 
   return (

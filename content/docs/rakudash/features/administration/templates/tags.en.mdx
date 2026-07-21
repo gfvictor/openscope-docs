@@ -1,0 +1,59 @@
+---
+title: Injection Tags
+description: Database variables available for documents.
+---
+
+# Injection Tags
+
+### Overview
+
+Injection tags are standardized identifiers (variables) that the manager can position within Excel templates (`.xlsx`). During export, the system's engine searches for these markers and autonomously replaces them with the actual data of the target employee, mitigating human errors in the transcription of official documents (such as resumes or contracts).
+
+### Supported Tags Structure
+
+For the substitution to occur successfully, the tag must be inserted into the spreadsheet strictly respecting the double curly braces formatting `{{tag}}`.
+
+The official variables mapped by the database are divided into two main categories:
+
+#### 1. Personal Data
+
+- `{{avatar}}`: Employee's profile picture;
+- `{{today}}`: Current date of document export;
+- `{{name}}`: Full name;
+- `{{kana}}`: Name in Furigana/Katakana format;
+- `{{gender}}`: Gender;
+- `{{birthdate}}`: Structured date of birth;
+- `{{age}}`: Current age calculated in real-time;
+- `{{nationality}}`: Country of origin;
+- `{{visa}}`: Modality of the residence visa;
+- `{{visaExpirationDate}}`: Legal expiration date of the visa;
+- `{{japaneseLevel}}`: Japanese proficiency level (JLPT, etc.);
+- `{{phone}}`: Primary phone contact;
+- `{{email}}`: Email address;
+- `{{zipCode}}`: Postal code;
+- `{{address}}`: Complete residential address.
+
+#### 2. Professional Data
+
+For professional and academic history, the system uses an iterative indexing format. Simply append a number to the end of the tag (`1`, `2`, `n`) corresponding to the chronological order of the experience. Example: `{{fromMonth1}}` will retrieve the month of the first recorded experience, not the month of January.
+
+**Work Experience:**
+
+- `{{fromMonth1}}` to `{{fromMonthN}}`: Start month of experience _n_;
+- `{{toMonth1}}` to `{{toMonthN}}`: End month of experience _n_;
+- `{{fromYear1}}` to `{{fromYearN}}`: Start year of experience _n_;
+- `{{toYear1}}` to `{{toYearN}}`: End year of experience _n_;
+- `{{company1}}` to `{{companyN}}`: Company name for experience _n_;
+- `{{resignationReason1}}` to `{{resignationReasonN}}`: Reason for resignation for experience _n_.
+
+**Licenses and Certifications:**
+
+- `{{certificationMonth1}}` to `{{certificationMonthN}}`: Month of obtaining certification _n_;
+- `{{certificationYear1}}` to `{{certificationYearN}}`: Year of obtaining certification _n_;
+- `{{certificationType1}}` to `{{certificationTypeN}}`: Title or type of certification _n_.
+
+<Callout title="Operational Warning:">
+  The injection engine is strictly case-sensitive and sensitive to whitespace (e.g., use `
+  {{ visaExpirationDate }}`, not `{{ visa_expiration_date }}`). Use the tags exactly as presented
+  within the braces to ensure the correct extraction of corporate data.
+</Callout>

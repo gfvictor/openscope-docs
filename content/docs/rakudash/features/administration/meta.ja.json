@@ -1,0 +1,14 @@
+{
+  "title": "管理",
+  "pages": [
+    "index",
+    "offices",
+    "client-companies",
+    "agency-properties",
+    "salary-advances",
+    "paid-vacations",
+    "timesheet-injection",
+    "templates",
+    "exports"
+  ]
+}

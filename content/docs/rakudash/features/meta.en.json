@@ -1,4 +1,11 @@
 {
   "title": "Main Features",
-  "pages": ["access-security", "dashboard", "notifications", "human-resources", "requests"]
+  "pages": [
+    "access-security",
+    "dashboard",
+    "notifications",
+    "human-resources",
+    "requests",
+    "administration"
+  ]
 }

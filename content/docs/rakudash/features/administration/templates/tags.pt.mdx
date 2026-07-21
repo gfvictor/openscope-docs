@@ -1,0 +1,59 @@
+---
+title: Tags de Injeção
+description: Variáveis de banco de dados disponíveis para documentos.
+---
+
+# Tags de Injeção
+
+### Visão Geral
+
+As tags de injeção são identificadores (variáveis) padronizados que o gestor pode posicionar dentro dos modelos de Excel (`.xlsx`). Durante a exportação, o motor do sistema procura por esses marcadores e os substitui autonomamente pelos dados reais do colaborador alvo, mitigando erros humanos na transcrição de documentos oficiais (como _Rirekisho_ ou contratos).
+
+### Estrutura de Tags Suportadas
+
+Para que a substituição ocorra com sucesso, a tag deve ser inserida na planilha respeitando fielmente a formatação com chaves duplas `{{tag}}`.
+
+As variáveis oficiais mapeadas pelo banco de dados estão divididas em duas grandes categorias:
+
+#### 1. Dados Pessoais
+
+- `{{avatar}}`: Foto de perfil do colaborador;
+- `{{today}}`: Data atual da exportação do documento;
+- `{{name}}`: Nome completo;
+- `{{kana}}`: Nome em formato Furigana/Katakana;
+- `{{gender}}`: Gênero;
+- `{{birthdate}}`: Data de nascimento estruturada;
+- `{{age}}`: Idade atual calculada em tempo real;
+- `{{nationality}}`: País de origem;
+- `{{visa}}`: Modalidade do visto de permanência;
+- `{{visaExpirationDate}}`: Data limite legal de expiração do visto;
+- `{{japaneseLevel}}`: Nível de proficiência em japonês (JLPT, etc.);
+- `{{phone}}`: Contato telefônico primário;
+- `{{email}}`: Endereço de e-mail;
+- `{{zipCode}}`: Código postal;
+- `{{address}}`: Endereço residencial completo.
+
+#### 2. Dados Profissionais
+
+Para o histórico profissional e acadêmico, o sistema utiliza um formato de indexação iterativo. Basta adicionar um número ao final da tag (`1`, `2`, `n`) correspondente à ordem cronológica da experiência. Exemplo: `{{fromMonth1}}` trará o mês da primeira experiência registrada, e não o mês de janeiro.
+
+**Experiência de Trabalho:**
+
+- `{{fromMonth1}}` a `{{fromMonthN}}`: Mês de início da experiência _n_;
+- `{{toMonth1}}` a `{{toMonthN}}`: Mês de término da experiência _n_;
+- `{{fromYear1}}` a `{{fromYearN}}`: Ano de início da experiência _n_;
+- `{{toYear1}}` a `{{toYearN}}`: Ano de término da experiência _n_;
+- `{{company1}}` a `{{companyN}}`: Nome da empresa da experiência _n_;
+- `{{resignationReason1}}` a `{{resignationReasonN}}`: Motivo do desligamento da experiência _n_.
+
+**Licenças e Certificações:**
+
+- `{{certificationMonth1}}` a `{{certificationMonthN}}`: Mês de obtenção da certificação _n_;
+- `{{certificationYear1}}` a `{{certificationYearN}}`: Ano de obtenção da certificação _n_;
+- `{{certificationType1}}` a `{{certificationTypeN}}`: Título ou tipo da certificação _n_.
+
+<Callout title="Atenção Operacional:">
+  O motor de injeção é estritamente _case-sensitive_ e sensível a espaços em branco (ex: utilize `
+  {{ visaExpirationDate }}`, não `{{ visa_expiration_date }}`). Utilize as tags rigorosamente como
+  apresentadas dentro das chaves, para garantir a correta extração dos dados corporativos.
+</Callout>
