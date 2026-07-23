@@ -66,6 +66,12 @@
     --radius: 0.5rem;
   }
 
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   .dark {
     --background: hsl(0 0% 5%);
     --foreground: hsl(0 0% 99%);

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
@@ -14,6 +14,7 @@ const locales = [
 
 export function SidebarFooter() {
   const pathname = usePathname()
+  const router = useRouter()
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -49,19 +50,36 @@ export function SidebarFooter() {
         {locales.map((locale) => {
           const isActive = currentLocale === locale.code
           return (
-            <Link
+            <button
               key={locale.code}
-              href={getLocalizedPath(locale.code)}
-              className={`px-2 py-1 text-xs font-semibold uppercase transition-colors ${isActive ? 'text-fd-foreground border-fd-primary border-b' : 'text-fd-muted-foreground hover:text-fd-foreground'}`}
+              onClick={() => {
+                const url = getLocalizedPath(locale.code)
+                if (!document.startViewTransition) {
+                  router.push(url)
+                  return
+                }
+                document.startViewTransition(() => {
+                  router.push(url)
+                })
+              }}
+              className={`cursor-pointer px-2 py-1 text-xs font-semibold uppercase transition-colors ${isActive ? 'text-fd-foreground border-fd-primary border-b' : 'text-fd-muted-foreground hover:text-fd-foreground'}`}
             >
               {locale.label}
-            </Link>
+            </button>
           )
         })}
       </div>
 
       <button
-        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        onClick={() => {
+          if (!document.startViewTransition) {
+            setTheme(theme === 'dark' ? 'light' : 'dark')
+            return
+          }
+          document.startViewTransition(() => {
+            setTheme(theme === 'dark' ? 'light' : 'dark')
+          })
+        }}
         className="text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-accent rounded-md p-1.5 transition-colors"
         aria-label="Toggle theme"
       >
