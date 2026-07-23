@@ -75,12 +75,12 @@ export function SidebarFooter() {
             setTheme(theme === 'dark' ? 'light' : 'dark')
             return
           }
-          
+
           document.documentElement.classList.add('disable-transitions')
           const transition = document.startViewTransition(() => {
             setTheme(theme === 'dark' ? 'light' : 'dark')
           })
-          
+
           transition.finished.finally(() => {
             document.documentElement.classList.remove('disable-transitions')
           })
