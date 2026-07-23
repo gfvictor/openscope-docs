@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
@@ -76,8 +75,14 @@ export function SidebarFooter() {
             setTheme(theme === 'dark' ? 'light' : 'dark')
             return
           }
-          document.startViewTransition(() => {
+          
+          document.documentElement.classList.add('disable-transitions')
+          const transition = document.startViewTransition(() => {
             setTheme(theme === 'dark' ? 'light' : 'dark')
+          })
+          
+          transition.finished.finally(() => {
+            document.documentElement.classList.remove('disable-transitions')
           })
         }}
         className="text-fd-muted-foreground hover:text-fd-foreground hover:bg-fd-accent rounded-md p-1.5 transition-colors"
