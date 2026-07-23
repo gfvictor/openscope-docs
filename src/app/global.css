@@ -66,6 +66,11 @@
     --radius: 0.5rem;
   }
 
+  .disable-transitions * {
+    transition: none !important;
+    animation: none !important;
+  }
+
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation-duration: 0.4s;
