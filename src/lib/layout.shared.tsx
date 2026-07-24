@@ -1,10 +1,16 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import { OpenScopeLogo } from '@/components/ui/openscope-logo'
+import { ExternalLink } from 'lucide-react'
 
 export function baseOptions(lang?: string): BaseLayoutProps {
   const navUrl = lang && lang !== 'ja' ? `/${lang}` : '/'
   const isPt = !lang || lang === 'pt'
-  const officialSiteText = isPt ? 'Site Oficial' : lang === 'ja' ? '公式サイト' : 'Official Site'
+  const officialSiteText = (
+    <span className="flex items-center gap-2">
+      {isPt ? 'Site Oficial' : lang === 'ja' ? '公式サイト' : 'Official Site'}
+      <ExternalLink className="h-3.5 w-3.5 opacity-40 text-fd-muted-foreground" />
+    </span>
+  )
   const demosText = isPt ? 'Demonstrações' : lang === 'ja' ? 'デモ' : 'Demos'
 
   return {
@@ -26,9 +32,33 @@ export function baseOptions(lang?: string): BaseLayoutProps {
         type: 'menu',
         text: demosText,
         items: [
-          { text: 'Rakudash', url: 'https://demo.rakudash.com' },
-          { text: 'EnTori', url: 'https://demo.entori.rakudash.com' },
-          { text: 'WanSpot', url: 'https://demo.wanspot.rakudash.com' },
+          { 
+            text: (
+              <span key="entori" className="flex items-center gap-2">
+                <img src="/img/entori-logo.png" alt="" className="h-4 w-4 opacity-70 dark:invert" />
+                EnTori <ExternalLink className="h-3.5 w-3.5 opacity-40 text-fd-muted-foreground" />
+              </span>
+            ), 
+            url: 'https://demo.entori.rakudash.com' 
+          },
+          { 
+            text: (
+              <span key="rakudash" className="flex items-center gap-2">
+                <img src="/img/rakudash-logo.svg" alt="" className="h-4 w-4 opacity-70 dark:invert" />
+                Rakudash <ExternalLink className="h-3.5 w-3.5 opacity-40 text-fd-muted-foreground" />
+              </span>
+            ), 
+            url: 'https://demo.rakudash.com' 
+          },
+          { 
+            text: (
+              <span key="wanspot" className="flex items-center gap-2">
+                <img src="/img/wanspot-logo.svg" alt="" className="h-4 w-4 opacity-70 dark:invert" />
+                WanSpot <ExternalLink className="h-3.5 w-3.5 opacity-40 text-fd-muted-foreground" />
+              </span>
+            ), 
+            url: 'https://demo.wanspot.rakudash.com' 
+          },
         ],
       },
     ],
