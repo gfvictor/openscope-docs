@@ -4,7 +4,7 @@ const withMDX = createMDX()
 
 const config = {
   reactStrictMode: true,
-  allowedDevOrigins: ['192.168.11.7'],
+  allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS.split(','),
 }
 
 export default withMDX(config)
