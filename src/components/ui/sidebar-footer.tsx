@@ -4,6 +4,8 @@ import { usePathname, useRouter } from 'next/navigation'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { flushSync } from 'react-dom'
+import { useSidebar } from 'fumadocs-ui/components/sidebar/base'
 
 const locales = [
   { code: 'en', label: 'en' },
@@ -16,6 +18,7 @@ export function SidebarFooter() {
   const router = useRouter()
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const { closeOnRedirect } = useSidebar()
 
   useEffect(() => setMounted(true), [])
 
@@ -51,8 +54,13 @@ export function SidebarFooter() {
           return (
             <button
               key={locale.code}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
                 const url = getLocalizedPath(locale.code)
+                if (closeOnRedirect) {
+                  closeOnRedirect.current = false
+                }
                 if (!document.startViewTransition) {
                   router.push(url)
                   return
@@ -70,7 +78,9 @@ export function SidebarFooter() {
       </div>
 
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
           if (!document.startViewTransition) {
             setTheme(theme === 'dark' ? 'light' : 'dark')
             return
@@ -78,7 +88,9 @@ export function SidebarFooter() {
 
           document.documentElement.classList.add('disable-transitions')
           const transition = document.startViewTransition(() => {
-            setTheme(theme === 'dark' ? 'light' : 'dark')
+            flushSync(() => {
+              setTheme(theme === 'dark' ? 'light' : 'dark')
+            })
           })
 
           transition.finished.finally(() => {
